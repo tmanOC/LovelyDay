@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		042BA8632586A63F00BEE68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8622586A63F00BEE68B /* AppDelegate.swift */; };
-		042BA8652586A63F00BEE68B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8642586A63F00BEE68B /* SceneDelegate.swift */; };
 		042BA8672586A63F00BEE68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8662586A63F00BEE68B /* ViewController.swift */; };
 		042BA86C2586A64000BEE68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042BA86B2586A64000BEE68B /* Assets.xcassets */; };
 		042BA86F2586A64000BEE68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042BA86D2586A64000BEE68B /* LaunchScreen.storyboard */; };
@@ -16,6 +15,7 @@
 		042BA8852586A64000BEE68B /* LovelyDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8842586A64000BEE68B /* LovelyDayUITests.swift */; };
 		042BA8A52586B51300BEE68B /* TodayBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8A42586B51300BEE68B /* TodayBarView.swift */; };
 		042BA8AD2586B53700BEE68B /* ForecastTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8AC2586B53700BEE68B /* ForecastTableView.swift */; };
+		042BA8CA2586BBEC00BEE68B /* WeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8C92586BBEC00BEE68B /* WeatherFetcher.swift */; };
 		4D1C30E146FF18F6A6BBCAD9 /* libPods-LovelyDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B964ADD404BDE47E76D166 /* libPods-LovelyDay.a */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		042BA85F2586A63F00BEE68B /* LovelyDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovelyDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042BA8622586A63F00BEE68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		042BA8642586A63F00BEE68B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		042BA8662586A63F00BEE68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		042BA86B2586A64000BEE68B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042BA86E2586A64000BEE68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		042BA8862586A64000BEE68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042BA8A42586B51300BEE68B /* TodayBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBarView.swift; sourceTree = "<group>"; };
 		042BA8AC2586B53700BEE68B /* ForecastTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableView.swift; sourceTree = "<group>"; };
+		042BA8C92586BBEC00BEE68B /* WeatherFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFetcher.swift; sourceTree = "<group>"; };
 		B79567E2EF9C35805EA999DF /* Pods-LovelyDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LovelyDay.debug.xcconfig"; path = "Target Support Files/Pods-LovelyDay/Pods-LovelyDay.debug.xcconfig"; sourceTree = "<group>"; };
 		D9B964ADD404BDE47E76D166 /* libPods-LovelyDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LovelyDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EB46D179D9FF583B93D6D0 /* Pods-LovelyDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LovelyDay.release.xcconfig"; path = "Target Support Files/Pods-LovelyDay/Pods-LovelyDay.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,9 +108,9 @@
 		042BA8612586A63F00BEE68B /* LovelyDay */ = {
 			isa = PBXGroup;
 			children = (
+				042BA8C82586BBC900BEE68B /* Networking */,
 				042BA8A32586B45600BEE68B /* Views */,
 				042BA8622586A63F00BEE68B /* AppDelegate.swift */,
-				042BA8642586A63F00BEE68B /* SceneDelegate.swift */,
 				042BA8662586A63F00BEE68B /* ViewController.swift */,
 				042BA86B2586A64000BEE68B /* Assets.xcassets */,
 				042BA86D2586A64000BEE68B /* LaunchScreen.storyboard */,
@@ -146,13 +146,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		042BA8C82586BBC900BEE68B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				042BA8C92586BBEC00BEE68B /* WeatherFetcher.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		51551687E61DEB0A87E8F367 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B79567E2EF9C35805EA999DF /* Pods-LovelyDay.debug.xcconfig */,
 				F7EB46D179D9FF583B93D6D0 /* Pods-LovelyDay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -320,10 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				042BA8672586A63F00BEE68B /* ViewController.swift in Sources */,
+				042BA8CA2586BBEC00BEE68B /* WeatherFetcher.swift in Sources */,
 				042BA8AD2586B53700BEE68B /* ForecastTableView.swift in Sources */,
 				042BA8632586A63F00BEE68B /* AppDelegate.swift in Sources */,
 				042BA8A52586B51300BEE68B /* TodayBarView.swift in Sources */,
-				042BA8652586A63F00BEE68B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4CJ5A6WXU;
 				INFOPLIST_FILE = LovelyDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4CJ5A6WXU;
 				INFOPLIST_FILE = LovelyDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

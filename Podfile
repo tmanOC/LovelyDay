@@ -1,6 +1,6 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'LovelyDay' do
-  pod 'AFNetworking', '~> 4.0'
+  pod 'Alamofire', '~> 5.2'
 end
 

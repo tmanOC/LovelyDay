@@ -1,0 +1,6 @@
+module Pods_LovelyDay {
+  umbrella header "Pods-LovelyDay-umbrella.h"
+
+  export *
+  module * { export * }
+}
