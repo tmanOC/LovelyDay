@@ -16,6 +16,11 @@
 		042BA8A52586B51300BEE68B /* TodayBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8A42586B51300BEE68B /* TodayBarView.swift */; };
 		042BA8AD2586B53700BEE68B /* ForecastTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8AC2586B53700BEE68B /* ForecastTableView.swift */; };
 		042BA8CA2586BBEC00BEE68B /* WeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8C92586BBEC00BEE68B /* WeatherFetcher.swift */; };
+		042BA8D82586BDE400BEE68B /* MyLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8D72586BDE400BEE68B /* MyLocationManager.swift */; };
+		04F0E67F2586E89B00AC76D3 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0E67E2586E89B00AC76D3 /* UIColor+RGB.swift */; };
+		04F0E6872586E9A600AC76D3 /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0E6862586E9A600AC76D3 /* UIView+Loader.swift */; };
+		04F0E68C2586E9E700AC76D3 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0E68B2586E9E700AC76D3 /* UIView+Frame.swift */; };
+		04F0E6912586F38300AC76D3 /* NSAttributedString+Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0E6902586F38300AC76D3 /* NSAttributedString+Constructor.swift */; };
 		4D1C30E146FF18F6A6BBCAD9 /* libPods-LovelyDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B964ADD404BDE47E76D166 /* libPods-LovelyDay.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +57,11 @@
 		042BA8A42586B51300BEE68B /* TodayBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBarView.swift; sourceTree = "<group>"; };
 		042BA8AC2586B53700BEE68B /* ForecastTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableView.swift; sourceTree = "<group>"; };
 		042BA8C92586BBEC00BEE68B /* WeatherFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFetcher.swift; sourceTree = "<group>"; };
+		042BA8D72586BDE400BEE68B /* MyLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationManager.swift; sourceTree = "<group>"; };
+		04F0E67E2586E89B00AC76D3 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		04F0E6862586E9A600AC76D3 /* UIView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
+		04F0E68B2586E9E700AC76D3 /* UIView+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
+		04F0E6902586F38300AC76D3 /* NSAttributedString+Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Constructor.swift"; sourceTree = "<group>"; };
 		B79567E2EF9C35805EA999DF /* Pods-LovelyDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LovelyDay.debug.xcconfig"; path = "Target Support Files/Pods-LovelyDay/Pods-LovelyDay.debug.xcconfig"; sourceTree = "<group>"; };
 		D9B964ADD404BDE47E76D166 /* libPods-LovelyDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LovelyDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EB46D179D9FF583B93D6D0 /* Pods-LovelyDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LovelyDay.release.xcconfig"; path = "Target Support Files/Pods-LovelyDay/Pods-LovelyDay.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +118,8 @@
 		042BA8612586A63F00BEE68B /* LovelyDay */ = {
 			isa = PBXGroup;
 			children = (
+				04F0E67D2586E88500AC76D3 /* Extensions */,
+				042BA8D62586BDD000BEE68B /* Location */,
 				042BA8C82586BBC900BEE68B /* Networking */,
 				042BA8A32586B45600BEE68B /* Views */,
 				042BA8622586A63F00BEE68B /* AppDelegate.swift */,
@@ -152,6 +164,25 @@
 				042BA8C92586BBEC00BEE68B /* WeatherFetcher.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		042BA8D62586BDD000BEE68B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				042BA8D72586BDE400BEE68B /* MyLocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		04F0E67D2586E88500AC76D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04F0E67E2586E89B00AC76D3 /* UIColor+RGB.swift */,
+				04F0E6862586E9A600AC76D3 /* UIView+Loader.swift */,
+				04F0E68B2586E9E700AC76D3 /* UIView+Frame.swift */,
+				04F0E6902586F38300AC76D3 /* NSAttributedString+Constructor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		51551687E61DEB0A87E8F367 /* Pods */ = {
@@ -327,9 +358,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				042BA8672586A63F00BEE68B /* ViewController.swift in Sources */,
+				04F0E6872586E9A600AC76D3 /* UIView+Loader.swift in Sources */,
+				04F0E67F2586E89B00AC76D3 /* UIColor+RGB.swift in Sources */,
 				042BA8CA2586BBEC00BEE68B /* WeatherFetcher.swift in Sources */,
+				042BA8D82586BDE400BEE68B /* MyLocationManager.swift in Sources */,
+				04F0E68C2586E9E700AC76D3 /* UIView+Frame.swift in Sources */,
 				042BA8AD2586B53700BEE68B /* ForecastTableView.swift in Sources */,
 				042BA8632586A63F00BEE68B /* AppDelegate.swift in Sources */,
+				04F0E6912586F38300AC76D3 /* NSAttributedString+Constructor.swift in Sources */,
 				042BA8A52586B51300BEE68B /* TodayBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
